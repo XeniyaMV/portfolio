@@ -1,3 +1,13 @@
-h1 {
-  text-align: center;
+@import './base/reset';
+@import './abstracts/variabels';
+@import './abstracts/mixins';
+
+html {
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: $text-color;
+  background-color: $body-color;
 }
