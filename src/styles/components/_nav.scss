@@ -1,0 +1,40 @@
+.nav {
+  width: 44rem;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-weight: 300;
+
+    @include transition;
+
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: relative;
+      top: 0.5rem;
+      display: block;
+
+      width: 0%;
+      height: 0.2rem;
+      border-radius: $border-radius;
+      border-color: transparent;
+
+      background-color: $accent-color;
+
+      @include transition;
+    }
+
+    &:hover {
+      font-size: 1.9rem;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
