@@ -1,4 +1,5 @@
 .start-screen {
+  z-index: 100;
   @include section-card($start-screen-section-color);
 
   &__content {

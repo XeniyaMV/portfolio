@@ -15,8 +15,10 @@ body {
 }
 
 @import './layout/container';
+@import './layout/section-card';
 
 @import './components/header';
 @import './components/nav';
 @import './components/highlight';
 @import './components/start-screen';
+@import './components/about-me';

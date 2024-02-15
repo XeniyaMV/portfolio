@@ -1,0 +1,38 @@
+.section-card {
+  top: -1.5rem;
+  padding: 4rem 0rem 2.5rem 0rem;
+
+  &__content {
+    height: 0rem;
+    @include transition;
+
+    overflow: hidden;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 0rem 0.5rem;
+    border-bottom: 0.1rem solid $text-color;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__icon-wrapper {
+    width: 3.5rem;
+    @include transition;
+    cursor: pointer;
+
+    &_hide {
+      transform: rotate(180deg);
+    }
+  }
+
+  &_about-me {
+    @include section-card($about-me-section-color);
+  }
+}
