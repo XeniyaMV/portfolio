@@ -3,10 +3,20 @@
   padding: 4rem 0rem 2.5rem 0rem;
 
   &__content {
-    height: 0rem;
-    @include transition;
+    padding: 0rem;
+    padding-bottom: 1rem;
 
+    transform: translateY(-110%);
+    @include transition;
+    transition-duration: 2.5s;
+
+    opacity: 0;
     overflow: hidden;
+
+    &_visible {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 
   &__footer {
