@@ -26,7 +26,7 @@ const SectionCardLayout = ({ sectionName, className, children }: Props): JSX.Ele
   }, []);
 
   return (
-    <section ref={cardRef} className={fullClassName}>
+    <section id={sectionName.toLowerCase().replace(' ', '-')} ref={cardRef} className={fullClassName}>
       <ContainerLayout className={className}>
         <>
           <div className={`section-card__content${isOpen ? ' section-card__content_visible' : ''}`} ref={contentRef}>

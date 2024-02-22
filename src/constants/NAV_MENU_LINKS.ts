@@ -3,7 +3,7 @@ import { NavItem } from '../types';
 const NAV_MENU_LINKS: NavItem[] = [
   {
     title: 'About me',
-    url: '#',
+    url: '#about-me',
   },
   {
     title: 'Projects',

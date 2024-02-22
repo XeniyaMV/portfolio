@@ -1,2 +1,46 @@
 .about-me {
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 6rem;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 65%;
+  }
+
+  &__paragraph {
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    background-color: $body-color;
+
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  &__interests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  &__title {
+    border-bottom: 0.2rem dashed $text-color;
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
 }
