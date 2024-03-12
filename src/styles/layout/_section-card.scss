@@ -6,17 +6,9 @@
     padding: 0rem;
     padding-bottom: 1rem;
 
-    transform: translateY(-110%);
-    @include transition;
-    transition-duration: 3s;
+    transform: translateY(0%);
 
-    opacity: 0;
-    overflow: hidden;
-
-    &_visible {
-      transform: translateY(0%);
-      opacity: 1;
-    }
+    opacity: 1;
   }
 
   &__footer {
@@ -44,6 +36,13 @@
   }
 
   &_about-me {
+    z-index: 4;
     @include section-card($about-me-section-color);
+  }
+
+  &_projects {
+    top: -3rem;
+    z-index: 3;
+    @include section-card($projects-section-color);
   }
 }

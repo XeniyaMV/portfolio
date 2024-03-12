@@ -1,0 +1,13 @@
+.scroll-observer {
+  transform: translateX(-5%);
+  @include transition;
+  transition-duration: 1.5s;
+
+  opacity: 0;
+
+  &_visible {
+    transform: translateX(0);
+
+    opacity: 1;
+  }
+}

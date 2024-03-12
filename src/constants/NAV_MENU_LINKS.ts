@@ -7,11 +7,11 @@ const NAV_MENU_LINKS: NavItem[] = [
   },
   {
     title: 'Projects',
-    url: '#',
+    url: '#projects',
   },
   {
     title: 'Get in Touch',
-    url: '#',
+    url: '#get-in-touch',
   },
   {
     title: 'CV',

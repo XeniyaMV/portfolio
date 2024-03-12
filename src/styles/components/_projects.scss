@@ -1,0 +1,14 @@
+.projects {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+  }
+
+  &__card {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+  }
+}

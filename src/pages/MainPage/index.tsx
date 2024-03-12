@@ -1,5 +1,6 @@
 import AboutMe from '../../components/AboutMe';
 import Header from '../../components/Header';
+import Projects from '../../components/Projects';
 import StartScreen from '../../components/StartScreen';
 
 const MainPage = (): JSX.Element => (
@@ -8,6 +9,7 @@ const MainPage = (): JSX.Element => (
     <main>
       <StartScreen />
       <AboutMe />
+      <Projects />
     </main>
   </>
 );
