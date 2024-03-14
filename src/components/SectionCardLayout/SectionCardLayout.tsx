@@ -8,10 +8,13 @@ interface Props {
 }
 
 const SectionCardLayout = ({ sectionName, className, children }: Props): JSX.Element => {
-  const fullClassName = getFullClassName('section-card', `section-card_${sectionName.toLowerCase().replace(' ', '-')}`);
+  const fullClassName = getFullClassName(
+    'section-card',
+    `section-card_${sectionName.toLowerCase().replaceAll(' ', '-')}`
+  );
 
   return (
-    <section id={sectionName.toLowerCase().replace(' ', '-')} className={fullClassName}>
+    <section id={sectionName.toLowerCase().replaceAll(' ', '-')} className={fullClassName}>
       <ContainerLayout className={className}>
         <>
           <div className="section-card__content">{children}</div>

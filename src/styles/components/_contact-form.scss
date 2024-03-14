@@ -1,0 +1,100 @@
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  grid-template-areas:
+    'name email'
+    'subject subject'
+    'message message'
+    'button button';
+
+  width: 50%;
+
+  &__field {
+    position: relative;
+
+    &_name {
+      grid-area: name;
+    }
+
+    &_email {
+      grid-area: email;
+    }
+
+    &_subject {
+      grid-area: subject;
+    }
+
+    &_message {
+      grid-area: message;
+
+      height: 20rem;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -2rem;
+
+    font-size: 1.6rem;
+    transform: translateY(0.3rem);
+
+    opacity: 0;
+
+    @include transition;
+
+    &_visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+
+    border: 0.1rem solid transparent;
+    border-radius: $border-radius;
+
+    background-color: $body-color;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $text-color;
+
+    resize: none;
+    @include transition;
+
+    &:focus {
+      outline: none;
+      border-color: $text-color;
+
+      background-color: $body-color;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+
+    padding: 1.5rem;
+
+    border: 0.1rem solid $body-color;
+    border-radius: $border-radius;
+
+    background-image: linear-gradient(to right, $accent-color, #e7f4f9);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $text-color;
+
+    @include transition;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $text-color;
+    }
+  }
+}
