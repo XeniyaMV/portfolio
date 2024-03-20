@@ -6,6 +6,7 @@
     'name email'
     'subject subject'
     'message message'
+    'notification notification'
     'button button';
 
   width: 50%;
@@ -30,6 +31,10 @@
 
       height: 20rem;
     }
+  }
+
+  &__notification {
+    grid-area: notification;
   }
 
   &__label {

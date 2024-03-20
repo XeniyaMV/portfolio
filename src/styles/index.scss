@@ -15,6 +15,22 @@ body {
   color: $text-color;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent-color;
+  border-radius: $border-radius;
+
+  cursor: default;
+}
+
 @import './layout/container';
 @import './layout/section-card';
 
@@ -28,3 +44,5 @@ body {
 @import './components/scroll-observer';
 @import './components/contact-form';
 @import './components/field';
+@import './components/get-in-touch';
+@import './components/notification';

@@ -16,6 +16,7 @@ const InputField = ({ id, className, type, placeholder }: Props): JSX.Element =>
         className="field__input"
         type={type}
         id={id}
+        name={id}
         placeholder={placeholder}
         onFocus={(): void => setIsFocused(true)}
         onBlur={(): void => setIsFocused(false)}

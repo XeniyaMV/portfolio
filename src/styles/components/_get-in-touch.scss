@@ -1,0 +1,38 @@
+.get-in-touch {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 0;
+  }
+
+  &__title {
+    width: 90%;
+    font-size: 3.2rem;
+  }
+
+  &__highlight {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 2.5rem;
+
+    margin-top: 2.5rem;
+  }
+
+  &__link {
+    width: 3.5rem;
+
+    @include transition;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
