@@ -10,10 +10,12 @@ const StartScreen = (): JSX.Element => {
   const observer = new IntersectionObserver(
     (entries) => {
       const [entry] = entries;
-      setIsVisible(entry.isIntersecting);
-      observer.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        setIsVisible(entry.isIntersecting);
+        observer.unobserve(entry.target);
+      }
     },
-    { threshold: 0.1 }
+    { threshold: 0.15 }
   );
 
   useEffect(() => {

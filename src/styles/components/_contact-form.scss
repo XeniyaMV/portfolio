@@ -37,23 +37,6 @@
     grid-area: notification;
   }
 
-  &__label {
-    position: absolute;
-    top: -2rem;
-
-    font-size: 1.6rem;
-    transform: translateY(0.3rem);
-
-    opacity: 0;
-
-    @include transition;
-
-    &_visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
   &__input {
     height: 100%;
 

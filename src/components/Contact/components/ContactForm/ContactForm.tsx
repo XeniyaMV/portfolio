@@ -85,7 +85,7 @@ const ContactForm = (): JSX.Element => {
       />
       <div className="field contact-form__field contact-form__field_message">
         <label
-          className={`field__label contact-form__label${isFocused ? ' contact-form__label_visible' : ''}`}
+          className={`field__label${isFocused ? ' field__label_visible' : ''} contact-form__label`}
           htmlFor="message"
         >
           Your Message
