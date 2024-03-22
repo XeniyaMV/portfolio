@@ -1,4 +1,4 @@
-import linkedinIcon from '../assets/Linkedin-icon.svg';
+import linkedinIcon from '../assets/linkedin-icon.svg';
 import telegramIcon from '../assets/telegram-icon.svg';
 import emailIcon from '../assets/mail-icon.svg';
 
