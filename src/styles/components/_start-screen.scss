@@ -9,6 +9,16 @@
     row-gap: 3rem;
 
     padding: 3rem 0;
+
+    transform: translateY(-4rem);
+    opacity: 0.1;
+    @include transition;
+    transition-duration: 2.5s;
+
+    &_visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__info {
