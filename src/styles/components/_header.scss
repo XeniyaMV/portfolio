@@ -1,5 +1,21 @@
 .header {
+  position: sticky;
+  top: -0.1rem;
+  z-index: 1000;
+
   background-color: $start-screen-section-color;
+
+  @include transition;
+
+  &_stuck {
+    border-bottom: 0.1rem solid $text-color;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+
+    background-color: $body-color;
+
+    box-shadow: 0 0.4rem 1rem #38373340;
+  }
 
   &__content {
     display: flex;
