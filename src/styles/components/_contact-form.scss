@@ -6,8 +6,8 @@
     'name email'
     'subject subject'
     'message message'
-    'notification notification'
-    'button button';
+    'button button'
+    'notification notification';
 
   width: 50%;
 
@@ -55,34 +55,15 @@
   }
 
   &__input {
-    width: 100%;
     height: 100%;
-    padding: 1.5rem;
-
-    border: 0.1rem solid transparent;
-    border-radius: $border-radius;
-
-    background-color: $body-color;
-
-    font-family: 'Inter', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: $text-color;
 
     resize: none;
-    @include transition;
-
-    &:focus {
-      outline: none;
-      border-color: $text-color;
-
-      background-color: $body-color;
-    }
   }
 
   &__button {
     grid-area: button;
 
+    margin-top: 1rem;
     padding: 1.5rem;
 
     border: 0.1rem solid $body-color;

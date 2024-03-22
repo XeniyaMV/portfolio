@@ -1,22 +1,35 @@
 import { useRef, useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
 
 import InputField from '../../../../UI/InputField/InputField';
+import schema from '../../../../utils/contactFormValidationSchema';
 
 import error_icon from '../../../../assets/exclamation-mark-icon.svg';
 import success_icon from '../../../../assets/check-icon.svg';
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 const ContactForm = (): JSX.Element => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>({ resolver: yupResolver(schema) });
   const formRef = useRef<HTMLFormElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const sendEmail = (event: React.FormEvent<HTMLFormElement>): void => {
-    event.preventDefault();
+  const sendEmail: SubmitHandler<ContactFormData> = (): void => {
     setIsError(false);
     setIsSuccess(false);
-
     if (formRef.current) {
       try {
         emailjs
@@ -39,32 +52,53 @@ const ContactForm = (): JSX.Element => {
   };
 
   return (
-    <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
-      <InputField className="contact-form__field contact-form__field_name" id="name" type="text" placeholder="Name" />
+    <form ref={formRef} className="contact-form" onSubmit={handleSubmit(sendEmail)}>
+      <InputField
+        className="contact-form__field contact-form__field_name"
+        id="name"
+        registeredName="name"
+        register={register}
+        type="text"
+        placeholder="Name"
+        hasError={!!errors.name}
+        helperText={errors.name?.message}
+      />
       <InputField
         className="contact-form__field contact-form__field_email"
         id="email"
+        registeredName="email"
+        register={register}
         type="email"
         placeholder="Email"
+        hasError={!!errors.email}
+        helperText={errors.email?.message}
       />
       <InputField
         className="contact-form__field contact-form__field_subject"
         id="subject"
+        registeredName="subject"
+        register={register}
         type="text"
         placeholder="Subject"
+        hasError={!!errors.subject}
+        helperText={errors.subject?.message}
       />
-      <div className="contact-form__field contact-form__field_message">
-        <label className={`contact-form__label${isFocused ? ' contact-form__label_visible' : ''}`} htmlFor="message">
+      <div className="field contact-form__field contact-form__field_message">
+        <label
+          className={`field__label contact-form__label${isFocused ? ' contact-form__label_visible' : ''}`}
+          htmlFor="message"
+        >
           Your Message
         </label>
         <textarea
-          className="contact-form__input"
+          className={`field__input${errors.message ? ' field__input_error' : ''} contact-form__input`}
           id="message"
-          name="message"
+          {...register('message')}
           placeholder="Your Message"
           onFocus={(): void => setIsFocused(true)}
           onBlur={(): void => setIsFocused(false)}
         />
+        {errors.message && <p className="field__helper-text contact-form__helper-text">{errors.message.message}</p>}
       </div>
       {isError && (
         <div className="notification notification_error contact-form__notification">
