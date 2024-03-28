@@ -43,6 +43,24 @@ const Card = ({ card }: Props): JSX.Element => (
         ))}
       </ul>
       <p className="card__description">{card.description}</p>
+      <ul className="card__buttons">
+        <li>
+          <a className="card__button" href={card.linkToCode}>
+            <div className="card__icon-wrapper">
+              <img src={gitHubIcon} alt="GitHub icon" />
+            </div>
+            View on GitHub
+          </a>
+        </li>
+        <li>
+          <a className="card__button" href={card.linkToDeploy}>
+            <div className="card__icon-wrapper">
+              <img src={outIcon} alt="Out icon" />
+            </div>
+            Visit Site
+          </a>
+        </li>
+      </ul>
     </div>
   </article>
 );

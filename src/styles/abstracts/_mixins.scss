@@ -28,6 +28,18 @@
   }
 }
 
+@mixin media-desktop-pointer {
+  @media (-moz-touch-enabled: 0), (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin media-mobile-pointer {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
 @mixin transition {
   transition: all;
   transition-duration: 500ms;

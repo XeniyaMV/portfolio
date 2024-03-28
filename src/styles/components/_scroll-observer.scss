@@ -1,4 +1,8 @@
 .scroll-observer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
   transform: translateX(-5%);
   @include transition;
   transition-duration: 1.5s;

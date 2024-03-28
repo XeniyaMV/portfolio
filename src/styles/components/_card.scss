@@ -1,5 +1,5 @@
 .card {
-  width: 35rem;
+  width: 95%;
   height: fit-content;
 
   border: 0.1rem solid transparent;
@@ -7,6 +7,10 @@
 
   @include transition;
   cursor: pointer;
+
+  @include media-m {
+    width: 100%;
+  }
 
   &__content {
     display: flex;
@@ -22,9 +26,11 @@
     font-family: $font-family-code;
     @include transition;
 
-    &:hover {
-      border: 0.1rem solid $text-color;
-      transform: translate(1rem, 1rem);
+    @include media-desktop-pointer {
+      &:hover {
+        border: 0.1rem solid $text-color;
+        transform: translate(1rem, 1rem);
+      }
     }
   }
 
@@ -34,8 +40,13 @@
 
   &__image-wrapper {
     display: flex;
+    justify-content: center;
     border-radius: $border-radius;
     overflow: hidden;
+
+    .img {
+      border-radius: $border-radius;
+    }
   }
 
   &__links-wrapper {
@@ -107,17 +118,31 @@
     &:hover .card__icon-wrapper {
       transform: scale(1.05);
     }
+
+    @include media-m {
+      font-size: 1.6rem;
+    }
   }
 
   &__icon-wrapper {
+    display: flex;
+    align-items: center;
     width: 3.5rem;
 
     @include transition;
+
+    @include media-m {
+      width: 2.5rem;
+    }
   }
 
   &__title {
     font-size: 2.4rem;
     font-weight: 300;
+
+    @include media-m {
+      font-size: 2rem;
+    }
   }
 
   &__tech-stack-list {
@@ -135,25 +160,66 @@
 
     font-size: 1.6rem;
     font-weight: 300;
+
+    @include media-m {
+      font-size: 1.2rem;
+    }
   }
 
   &__description {
+    width: 100%;
+
     font-size: 1.8rem;
     font-weight: 300;
     text-align: justify;
+
+    @include media-m {
+      font-size: 1.6rem;
+    }
   }
 
-  &:hover {
-    border-color: $text-color;
+  @include media-desktop-pointer {
+    &:hover {
+      border-color: $text-color;
 
-    background-color: $card-back;
+      background-color: $card-back;
+    }
+
+    &:hover &__links-wrapper {
+      height: calc(100% + 2rem);
+
+      border-bottom-color: $text-color;
+
+      opacity: 1;
+    }
   }
 
-  &:hover &__links-wrapper {
-    height: calc(100% + 2rem);
+  &__buttons {
+    display: none;
 
-    border-bottom-color: $text-color;
+    @include media-mobile-pointer {
+      display: flex;
+      column-gap: 2rem;
+    }
+  }
 
-    opacity: 1;
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+
+    border: 0.3rem solid $body-color;
+    border-radius: $border-radius;
+
+    background-color: transparent;
+
+    font-size: 1.6rem;
+
+    @include media-m {
+      font-size: 1.6rem;
+    }
   }
 }

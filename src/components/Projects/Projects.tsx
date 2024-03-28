@@ -7,11 +7,11 @@ const Projects = (): JSX.Element => (
   <SectionCardLayout sectionName="Projects" className="projects">
     <div className="projects__content">
       {PROJECT_CARDS.map((card) => (
-        <ScrollObserver key={card.title}>
-          <div className="projects__card">
+        <div key={card.title} className="projects__card">
+          <ScrollObserver>
             <Card card={card} />
-          </div>
-        </ScrollObserver>
+          </ScrollObserver>
+        </div>
       ))}
     </div>
   </SectionCardLayout>

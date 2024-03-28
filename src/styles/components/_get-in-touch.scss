@@ -10,11 +10,19 @@
   &__title {
     width: 90%;
     font-size: 4.2rem;
+
+    @include media-xxl {
+      font-size: 3.5rem;
+    }
   }
 
   &__highlight {
     font-size: 4.5rem;
     font-weight: 500;
+
+    @include media-xxl {
+      font-size: 3.7rem;
+    }
   }
 
   &__links {
