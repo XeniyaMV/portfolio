@@ -11,6 +11,7 @@ const Projects = (): JSX.Element => (
           <ScrollObserver>
             <Card card={card} />
           </ScrollObserver>
+          <hr className="projects__divider" />
         </div>
       ))}
     </div>

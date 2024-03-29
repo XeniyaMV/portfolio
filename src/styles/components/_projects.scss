@@ -17,8 +17,23 @@
 
   &__card {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
+  }
+
+  &__divider {
+    @include media-mobile-pointer {
+      display: none;
+      border: 0.1rem solid $text-color;
+      border-radius: $border-radius;
+      opacity: 0.3;
+
+      @include media-l {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
