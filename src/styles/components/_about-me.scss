@@ -2,6 +2,11 @@
   &__content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    row-gap: 4rem;
+
+    @include media-l {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__description {
@@ -20,6 +25,10 @@
 
     font-weight: 300;
     text-align: justify;
+
+    @include media-l {
+      font-size: 1.6rem;
+    }
   }
 
   &__interests {
@@ -27,12 +36,20 @@
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
+
+    @include media-l {
+      row-gap: 3rem;
+    }
   }
 
   &__title {
     border-bottom: 0.2rem dashed $text-color;
     font-size: 2.4rem;
     font-weight: 300;
+
+    @include media-l {
+      font-size: 2rem;
+    }
   }
 
   &__list {
@@ -41,5 +58,20 @@
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
+
+    @include media-l {
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: 70%;
+    }
+
+    @include media-m {
+      width: 90%;
+    }
+
+    @include media-s {
+      width: 100%;
+    }
   }
 }
