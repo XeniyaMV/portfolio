@@ -36,6 +36,16 @@
     border-radius: 50%;
 
     overflow: hidden;
+
+    @include media-m {
+      width: 25rem;
+      height: 25rem;
+    }
+
+    @include media-s {
+      width: 20rem;
+      height: 20rem;
+    }
   }
 
   &__links {
@@ -53,6 +63,14 @@
     &:hover {
       transform: scale(1.2);
     }
+
+    @include media-m {
+      width: 3rem;
+    }
+
+    @include media-s {
+      width: 2.8rem;
+    }
   }
 
   &__greatings {
@@ -61,6 +79,18 @@
     font-size: 3rem;
     font-weight: 300;
     text-align: center;
+
+    @include media-l {
+      width: 100%;
+    }
+
+    @include media-m {
+      font-size: 2.5rem;
+    }
+
+    @include media-s {
+      font-size: 2rem;
+    }
   }
 
   &__tech-stack {
@@ -69,14 +99,38 @@
     align-items: center;
     row-gap: 2rem;
     width: 50%;
+
+    @include media-l {
+      width: 70%;
+    }
+
+    @include media-m {
+      width: 80%;
+    }
+
+    @include media-s {
+      width: 100%;
+    }
   }
 
   &__tech-stack &__link {
     width: 6.5rem;
+
+    @include media-m {
+      width: 5rem;
+    }
   }
 
   &__title {
     font-size: 3rem;
     font-weight: 300;
+
+    @include media-m {
+      font-size: 2.5rem;
+    }
+
+    @include media-s {
+      font-size: 2.2rem;
+    }
   }
 }
