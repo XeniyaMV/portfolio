@@ -5,6 +5,12 @@
     align-items: center;
 
     padding: 1rem 0;
+
+    @include media-l {
+      flex-direction: column;
+
+      row-gap: 3rem;
+    }
   }
 
   &__title {
@@ -13,6 +19,15 @@
 
     @include media-xxl {
       font-size: 3.5rem;
+    }
+
+    @include media-l {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include media-s {
+      font-size: 3rem;
     }
   }
 
@@ -23,6 +38,10 @@
     @include media-xxl {
       font-size: 3.7rem;
     }
+
+    @include media-s {
+      font-size: 3.2rem;
+    }
   }
 
   &__links {
@@ -32,6 +51,10 @@
     column-gap: 2.5rem;
 
     margin-top: 2.5rem;
+
+    @include media-l {
+      justify-content: center;
+    }
   }
 
   &__link {

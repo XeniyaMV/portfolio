@@ -35,6 +35,14 @@
     resize: none;
     @include transition;
 
+    @include media-m {
+      font-size: 2rem;
+    }
+
+    @include media-s {
+      font-size: 1.8rem;
+    }
+
     &:focus {
       outline: none;
       border-color: $text-color;

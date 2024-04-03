@@ -11,6 +11,14 @@
 
   width: 50%;
 
+  @include media-l {
+    width: 85%;
+  }
+
+  @include media-m {
+    width: 100%;
+  }
+
   &__field {
     position: relative;
 
@@ -64,6 +72,14 @@
 
     &:hover {
       border-color: $text-color;
+    }
+
+    @include media-m {
+      font-size: 2rem;
+    }
+
+    @include media-s {
+      font-size: 1.8rem;
     }
   }
 }
