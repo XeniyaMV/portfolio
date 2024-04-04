@@ -62,54 +62,59 @@ const ContactForm = (): JSX.Element => {
   }, [isSubmitSuccessful, reset]);
 
   return (
-    <form ref={formRef} className="contact-form" onSubmit={handleSubmit(sendEmail)}>
-      <InputField
-        className="contact-form__field contact-form__field_name"
-        id="name"
-        registeredName="name"
-        register={register}
-        type="text"
-        placeholder="Name"
-        hasError={!!errors.name}
-        helperText={errors.name?.message}
-      />
-      <InputField
-        className="contact-form__field contact-form__field_email"
-        id="email"
-        registeredName="email"
-        register={register}
-        type="email"
-        placeholder="Email"
-        hasError={!!errors.email}
-        helperText={errors.email?.message}
-      />
-      <InputField
-        className="contact-form__field contact-form__field_subject"
-        id="subject"
-        registeredName="subject"
-        register={register}
-        type="text"
-        placeholder="Subject"
-        hasError={!!errors.subject}
-        helperText={errors.subject?.message}
-      />
-      <div className="field contact-form__field contact-form__field_message">
-        <label
-          className={`field__label${isFocused ? ' field__label_visible' : ''} contact-form__label`}
-          htmlFor="message"
-        >
-          Your Message
-        </label>
-        <textarea
-          className={`field__input${errors.message ? ' field__input_error' : ''} contact-form__input`}
-          id="message"
-          {...register('message')}
-          placeholder="Your Message"
-          onFocus={(): void => setIsFocused(true)}
-          onBlur={(): void => setIsFocused(false)}
+    <div className="contact-form">
+      <form ref={formRef} className="contact-form__form" onSubmit={handleSubmit(sendEmail)}>
+        <InputField
+          className="contact-form__field contact-form__field_name"
+          id="name"
+          registeredName="name"
+          register={register}
+          type="text"
+          placeholder="Name"
+          hasError={!!errors.name}
+          helperText={errors.name?.message}
         />
-        {errors.message && <p className="field__helper-text contact-form__helper-text">{errors.message.message}</p>}
-      </div>
+        <InputField
+          className="contact-form__field contact-form__field_email"
+          id="email"
+          registeredName="email"
+          register={register}
+          type="email"
+          placeholder="Email"
+          hasError={!!errors.email}
+          helperText={errors.email?.message}
+        />
+        <InputField
+          className="contact-form__field contact-form__field_subject"
+          id="subject"
+          registeredName="subject"
+          register={register}
+          type="text"
+          placeholder="Subject"
+          hasError={!!errors.subject}
+          helperText={errors.subject?.message}
+        />
+        <div className="field contact-form__field contact-form__field_message">
+          <label
+            className={`field__label${isFocused ? ' field__label_visible' : ''} contact-form__label`}
+            htmlFor="message"
+          >
+            Your Message
+          </label>
+          <textarea
+            className={`field__input${errors.message ? ' field__input_error' : ''} contact-form__input`}
+            id="message"
+            {...register('message')}
+            placeholder="Your Message"
+            onFocus={(): void => setIsFocused(true)}
+            onBlur={(): void => setIsFocused(false)}
+          />
+          {errors.message && <p className="field__helper-text contact-form__helper-text">{errors.message.message}</p>}
+        </div>
+        <button className="contact-form__button" type="submit">
+          Send Message
+        </button>
+      </form>
       {isError && (
         <div className="notification notification_error contact-form__notification">
           <div className="notification__image-wrapper">
@@ -126,10 +131,7 @@ const ContactForm = (): JSX.Element => {
           <span className="notification__mesaage">Message is sent...</span>
         </div>
       )}
-      <button className="contact-form__button" type="submit">
-        Send Message
-      </button>
-    </form>
+    </div>
   );
 };
 
