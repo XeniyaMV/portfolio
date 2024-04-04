@@ -25,6 +25,12 @@
     padding: 2rem 0;
   }
 
+  &__nav {
+    @include media-m {
+      display: none;
+    }
+  }
+
   &__logo {
     padding: 0.5rem 1rem;
 

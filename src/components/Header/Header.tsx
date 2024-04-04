@@ -2,6 +2,7 @@ import ContainerLayout from '../ContainerLayout';
 import NAV_MENU_LINKS from '../../constants/NAV_MENU_LINKS';
 import Nav from './components/Nav';
 import StickyLayout from '../StickyLayout';
+import Burger from './components/Burger';
 
 const Header = (): JSX.Element => (
   <StickyLayout tagName="header" unstuckClassName="header" stuckClassName="header header_stuck">
@@ -11,6 +12,7 @@ const Header = (): JSX.Element => (
           <a href="#">Hi!</a>
         </h1>
         <Nav className="header__nav" items={NAV_MENU_LINKS} />
+        <Burger />
       </>
     </ContainerLayout>
   </StickyLayout>

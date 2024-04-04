@@ -13,6 +13,8 @@ body {
 
   font-size: 1.8rem;
   color: $text-color;
+
+  overflow-x: hidden;
 }
 
 /* width */
@@ -47,3 +49,6 @@ body {
 @import './components/get-in-touch';
 @import './components/notification';
 @import './components/footer';
+@import './components/burger-icon';
+@import './components/burger-menu';
+@import './components/noscroll';
