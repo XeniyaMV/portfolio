@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
@@ -19,8 +19,9 @@ interface ContactFormData {
 const ContactForm = (): JSX.Element => {
   const {
     register,
+    reset,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<ContactFormData>({ resolver: yupResolver(schema) });
   const formRef = useRef<HTMLFormElement>(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -50,6 +51,15 @@ const ContactForm = (): JSX.Element => {
       }
     }
   };
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      setTimeout(() => {
+        setIsSuccess(false);
+        reset();
+      }, 2000);
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <form ref={formRef} className="contact-form" onSubmit={handleSubmit(sendEmail)}>
