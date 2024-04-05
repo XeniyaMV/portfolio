@@ -1,5 +1,8 @@
 # Portfolio
 
+### Deploy
+ [Web page](https://xeniya-gazizova.netlify.app/)
+
 ### Technology Stack
 - **[Typescript](https://www.typescriptlang.org/)**: A typed programming language
 - **[React](https://react.dev/)**: A Front-end framework
