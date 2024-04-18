@@ -112,8 +112,8 @@ const PROJECT_CARDS: ProjectCard[] = [
     title: 'CSS Bayan',
     techStack: ['CSS', 'Git'],
     description: 'A responsive accordion implemented using only HTML5 and CSS.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/cssBayan/tree/gh-pages',
+    linkToDeploy: 'https://xeniyamv.github.io/cssBayan/cssBayan/',
   },
 ];
 

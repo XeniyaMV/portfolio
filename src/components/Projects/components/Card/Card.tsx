@@ -16,7 +16,7 @@ const Card = ({ card }: Props): JSX.Element => (
         <div className="card__links-wrapper">
           <ul className="card__links">
             <li>
-              <a className="card__link" href={card.linkToCode}>
+              <a target="_blank" className="card__link" href={card.linkToCode} rel="noreferrer">
                 <div className="card__icon-wrapper">
                   <img src={gitHubIcon} alt="GitHub icon" />
                 </div>
@@ -24,7 +24,7 @@ const Card = ({ card }: Props): JSX.Element => (
               </a>
             </li>
             <li>
-              <a className="card__link" href={card.linkToDeploy}>
+              <a target="_blank" className="card__link" href={card.linkToDeploy} rel="noreferrer">
                 <div className="card__icon-wrapper">
                   <img src={outIcon} alt="Out icon" />
                 </div>
