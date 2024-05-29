@@ -104,8 +104,8 @@ const PROJECT_CARDS: ProjectCard[] = [
     title: 'Shelter',
     techStack: ['JavaScript', 'CSS', 'Git', 'Figma'],
     description: 'A two-page pixel-perfect adaptive interactive website.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/shelter',
+    linkToDeploy: 'https://xeniyamv.github.io/shelter/shelter/index.html',
   },
   {
     image: cssBayan,
