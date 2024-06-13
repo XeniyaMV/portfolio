@@ -93,11 +93,11 @@ const PROJECT_CARDS: ProjectCard[] = [
   {
     image: virtualKeyboard,
     title: 'Virtual Keyboard',
-    techStack: ['JavaScript', 'CSS', 'Git', 'Webpack'],
+    techStack: ['JavaScript', 'CSS', 'Git', 'ESLint'],
     description:
       'A Virtual Keyboard component built in pure JavaScript featuring animated key buttons that can seamlessly switch between two language layouts: English and Russian. By clicking the buttons with a mouse on the virtual keyboard or pressing keys on a physical keyboard, users can input symbols directly into the text area positioned above the virtual keyboard on the page.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/virtual-keyboard/tree/development',
+    linkToDeploy: 'https://xeniyamv.github.io/virtual-keyboard/',
   },
   {
     image: shelter,
