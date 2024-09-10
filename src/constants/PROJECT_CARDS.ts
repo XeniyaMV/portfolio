@@ -1,6 +1,6 @@
 import { ProjectCard } from '../types';
 import graphQl from '../assets/graphiql-image.png';
-import forms from '../assets/forms-image.png';
+// import forms from '../assets/forms-image.png';
 import virtualKeyboard from '../assets/virtual-keyboard-image.png';
 import hpSearch from '../assets/hp-search-image.png';
 import cssSelectors from '../assets/css-selectors-image.png';
@@ -27,30 +27,30 @@ const PROJECT_CARDS: ProjectCard[] = [
     ],
     description:
       'A GraphQL playground/IDE with additional features such as authentication, authorization, and the ability to work with any user-specified open GraphQL endpoint.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/graphiql-app/tree/sprint-3',
+    linkToDeploy: 'https://graphiql-editor-dev.netlify.app/',
   },
-  {
-    image: forms,
-    title: 'Forms',
-    techStack: [
-      'React JS',
-      'React Router',
-      'React Hook Form',
-      'Redux Toolkit',
-      'TypeScript',
-      'Sass',
-      'ESLint',
-      'Git',
-      'Husky',
-      'Prettier',
-      'Vite',
-    ],
-    description:
-      'A responsive web application with two forms, each designed using distinct approaches—uncontrolled components and React Hook Form.',
-    linkToCode: '#',
-    linkToDeploy: '#',
-  },
+  // {
+  //   image: forms,
+  //   title: 'Forms',
+  //   techStack: [
+  //     'React JS',
+  //     'React Router',
+  //     'React Hook Form',
+  //     'Redux Toolkit',
+  //     'TypeScript',
+  //     'Sass',
+  //     'ESLint',
+  //     'Git',
+  //     'Husky',
+  //     'Prettier',
+  //     'Vite',
+  //   ],
+  //   description:
+  //     'A responsive web application with two forms, each designed using distinct approaches—uncontrolled components and React Hook Form.',
+  //   linkToCode: '#',
+  //   linkToDeploy: '#',
+  // },
   {
     image: hpSearch,
     title: 'Harry Potter Character Search',
@@ -69,8 +69,8 @@ const PROJECT_CARDS: ProjectCard[] = [
     ],
     description:
       'A well-designed page with two distinct sections — a search input and button in the top section, and a comprehensive display of search results in the bottom section.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/harry-potter-search/tree/react.redux',
+    linkToDeploy: 'https://react-redux--hp-search-redux.netlify.app/?page=1',
   },
   {
     image: cssSelectors,
@@ -78,8 +78,8 @@ const PROJECT_CARDS: ProjectCard[] = [
     techStack: ['TypeScript', 'Sass', 'ESLint', 'Git', 'Husky', 'Prettier', 'Webpack'],
     description:
       'An interactive educational game for learning css selectors. The game comprises multiple levels, each featuring an HTML layout example. Users are presented with highlighted elements through animations, and their task is to write CSS selectors that accurately target all the highlighted elements in the given layout.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/css-selectors',
+    linkToDeploy: 'https://xg-css-selectors.netlify.app/',
   },
   {
     image: minesweeper,
@@ -87,8 +87,8 @@ const PROJECT_CARDS: ProjectCard[] = [
     techStack: ['JavaScript', 'Sass', 'Git', 'Webpack'],
     description:
       'The classic Minesweeper game built entirely in JavaScript, offering options to choose difficulty levels and set the number of mines. Players can immerse themselves in the game while a stopwatch tracks their progress. Upon completion, users can review their results, including the elapsed time and the number of steps taken.',
-    linkToCode: '#',
-    linkToDeploy: '#',
+    linkToCode: 'https://github.com/XeniyaMV/minesweeper/tree/develop',
+    linkToDeploy: 'https://xg-minesweeper.netlify.app/',
   },
   {
     image: virtualKeyboard,
