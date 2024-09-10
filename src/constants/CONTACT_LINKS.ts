@@ -23,7 +23,7 @@ const CONTACT_LINKS = [
   {
     title: 'CV',
     src: cvIcon,
-    url: '',
+    url: 'https://xeniyamv.github.io/cv/xeniya_gazizova_cv.pdf',
   },
   {
     title: 'email',
