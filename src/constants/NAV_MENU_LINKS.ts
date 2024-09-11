@@ -15,7 +15,7 @@ const NAV_MENU_LINKS: NavItem[] = [
   },
   {
     title: 'CV',
-    url: '#',
+    url: 'https://xeniyamv.github.io/cv/xeniya_gazizova_cv.pdf',
   },
 ];
 
